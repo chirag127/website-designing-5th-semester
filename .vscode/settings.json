@@ -2,5 +2,5 @@
     "editor.tabCompletion": "on",
     "diffEditor.codeLens": true,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "aiXcoder.showTrayIcon": true
+    "aiXcoder.showTrayIcon": true,
 }
