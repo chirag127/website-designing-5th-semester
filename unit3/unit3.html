@@ -1,0 +1,1965 @@
+<!-- Concept of CSS: Creating Style Sheet, CSS Properties , CSS Styling(Background, Text Format,
+Controlling Fonts) , Working with block elements and objects , Working with Lists and Tables ,
+CSS Id and Class, Box Model(Introduction, Border properties, Padding Properties, Margin
+properties) CSS Advanced(Grouping, Dimension, Display, Positioning, Floating, Align, Pseudo
+class, Navigation Bar, Image Sprites, Attribute sector) , CSS Color , Creating page Layout and Site
+Designs. -->
+
+<Doctype html>
+    <html>
+
+    <head>
+        <title>Unit 3</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <h1>Unit 3</h1>
+        <p>These are the notes for the 3rd unit of the course.</p>
+
+
+        <h2>Concept of CSS</h2>
+
+        <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper,
+            or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+            External stylesheets are stored in CSS files.</p>
+
+        <h3>Creating Style Sheet</h3>
+
+        <p>There are three ways of inserting a style sheet:</p>
+
+        <ul>
+            <li>External CSS</li>
+            <li>Internal CSS</li>
+            <li>Inline CSS</li>
+
+        </ul>
+
+        <h4>External CSS</h4>
+
+        <p>An external style sheet can be written in any text editor. The style sheet file should not contain any HTML
+            tags. The style sheet file must be saved with a .css extension. To use an external style sheet, add a link
+            to the external style sheet file in the head section of an HTML document.</p>
+
+        <h5>example of external css</h5>
+
+        <p>
+            <code>
+                &lt;head&gt;
+                &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+                &lt;/head&gt;
+            </code>
+
+        </p>
+
+        <h4>Internal CSS</h4>
+
+        <p>An internal style sheet may be used if one single HTML page has a unique style. The internal style is defined
+            inside the style element, inside the head section.</p>
+
+        <h5>example of internal css</h5>
+
+        <p>
+            <code>
+                &lt;head&gt;
+                &lt;style&gt;
+                body {background-color: powderblue;}
+                h1   {color: blue;}
+                p    {color: red;}
+                &lt;/style&gt;
+                &lt;/head&gt;
+            </code>
+
+
+        </p>
+
+        <h4>Inline CSS</h4>
+
+
+        <p>An inline style may be used to apply a unique style for a single element. To use inline styles, add the
+            style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+
+        <h5>example of inline css</h5>
+
+        <p>
+            <code>
+                &lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;
+                &lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+            </code>
+
+        </p>
+
+        <h3>CSS syntax</h3>
+
+        <p>A CSS rule-set consists of a selector and a declaration block:</p>
+
+        <p>
+            <code>
+                selector {<br>
+                property: value;<br>
+                }
+            </code>
+
+        </p>
+
+        <h3>CSS selectors</h3>
+
+        <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+
+        <p>There are many different types of CSS selectors, which will be introduced in the following chapters.</p>
+
+        <h4>Types of CSS selectors</h4>
+
+        <p>There are many different types of CSS selectors:</p>
+
+        <ol>
+            <li>Simple selectors (select elements based on name, id, class)
+
+                <ol>
+                    <li>element selector
+                        <p> element selector selects all elements with the specified name.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                p {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+                    </li><!-- <li>id selector</li>
+                                        <li>class selector</li>
+                                        <li>universal selector</li>
+                                        <li>grouping selector</li>
+                                        <li>descendant selector</li>
+                                        <li>child selector</li> -->
+
+                    <li>id selector
+                        <p>id selector selects the element with a specific id.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                #para1 {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+                    </li>
+
+                    <li>class selector
+                        <p>class selector selects all elements with a specific class.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                .center {<br>
+                                text-align: center;<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+
+                    </li>
+
+                    <li>universal selector
+                        <p>universal selector selects all elements.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                * {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+
+                    <li>grouping selector
+
+                        <p>grouping selector selects all elements with the same style definitions.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                h1, h2, p {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>descendant selector
+
+                        <p>descendant selector selects elements that are descendants of a specified element.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                p a {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+
+                    <li>child selector
+
+                        <p>child selector selects elements that are the children of a specified element.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                ul &gt; li {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                </ol>
+
+            </li>
+
+            <li>Attribute selectors (select elements based on an attribute or attribute value)
+
+                <ol>
+                    <li>attribute selector
+                        <p>attribute selector selects elements with a specified attribute.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a[title] {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>attribute value selector
+                        <p>attribute value selector selects elements with a specified attribute value.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a[title="w3schools"] {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>attribute begins with selector
+                        <p>attribute begins with selector selects elements with a specified attribute value, beginning
+                            with a specific substring.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a[href^="https"] {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>attribute ends with selector
+                        <p>attribute ends with selector selects elements with a specified attribute value, ending with a
+                            specific substring.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a[href$=".pdf"] {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>attribute contains selector
+                        <p>attribute contains selector selects elements with a specified attribute value containing a
+                            specific substring.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a[href*="w3schools"] {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>first child selector
+                        <p>first child selector selects the first element among a group of siblings.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                p:first-child {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>link selector
+                        <p>link selector selects all unvisited links.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a:link {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>visited selector
+                        <p>visited selector selects all visited links.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a:visited {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>active selector
+                        <p>active selector selects the active link.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a:active {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>hover selector
+                        <p>hover selector selects links on mouse over.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                a:hover {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>focus selector
+                        <p>focus selector selects the input element which has focus.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                input:focus {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>target selector
+                        <p>target selector selects the current active #id.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                #news:target {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>enabled selector
+                        <p>enabled selector selects input elements that are enabled.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                input:enabled {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>disabled selector
+                        <p>disabled selector selects input elements that are disabled.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                input:disabled {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>checked selector
+                        <p>checked selector selects input elements that are checked.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                input:checked {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>not selector
+                        <p>not selector selects all elements that are not matched by the specified selector.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                :not(p) {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>empty selector
+                        <p>empty selector selects all elements that have no children (including text nodes).</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                p:empty {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>lang selector
+                        <p>lang selector selects elements based on the language of the element.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                p:lang(fr) {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+                    <li>root selector
+                        <p>root selector selects the document's root element.</p>
+
+                        <p>example</p>
+
+                        <p>
+                            <code>
+                                :root {<br>
+                                color: red;<br>
+                                }
+                            </code>
+
+                        </p>
+
+                    </li>
+
+
+
+            </li>
+
+        </ol>
+
+        </li>
+
+        </ol>
+
+        <h3>Css properties</h3>
+
+        <p>css properties are used to set the style of an element.</p>
+
+        <p>example</p>
+
+        <p>
+            <code>
+                p {<br>
+                color: red;<br>
+                }
+            </code>
+
+        </p>
+
+        <h4>css properties types</h4>
+
+        <p>css properties are of two types</p>
+
+        <ol>
+
+            <li>shorthand properties</li>
+
+            <li>longhand properties</li>
+
+        </ol>
+
+        <h4>shorthand properties</h4>
+
+        <p>shorthand properties are used to set the values of multiple properties at once.</p>
+
+        <p>example</p>
+
+        <p>
+            <code>
+                p {<br>
+                margin: 0px 0px 0px 0px;<br>
+                }
+            </code>
+
+        </p>
+
+        <h4>longhand properties</h4>
+
+        <p>longhand properties are used to set the values of a single property.</p>
+
+        <p>example</p>
+
+        <p>
+            <code>
+                p {<br>
+                margin-top: 0px;<br>
+                margin-right: 0px;<br>
+                margin-bottom: 0px;<br>
+                margin-left: 0px;<br>
+                }
+            </code>
+
+        </p>
+
+
+        <h4>css properties categories</h4>
+
+        <p>css properties are of two categories</p>
+
+        <ol>
+
+            <li>inherited properties</li>
+
+            <li>non inherited properties</li>
+
+        </ol>
+
+        <h4>inherited properties</h4>
+
+        <p>inherited properties are properties that are inherited by the child elements.</p>
+
+        <p>example</p>
+
+        <p>
+            <code>
+                p {<br>
+                color: red;<br>
+                }
+            </code>
+
+        </p>
+
+        <h4>non inherited properties</h4>
+
+        <p>non inherited properties are properties that are not inherited by the child elements.</p>
+
+        <p>example</p>
+
+        <p>
+            <code>
+                p {<br>
+                background-color: red;<br>
+                }
+            </code>
+
+        </p>
+
+        <h4>css properties list</h4>
+
+        <ol>
+
+            <li>Text properties
+
+                <!-- make a <table></table> -->
+
+                <table>
+                    <Thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>values</th>
+                            <th>example</th>
+
+                        </tr>
+                    </Thead>
+
+                    <tbody>
+                        <tr>
+                            <td>color</td>
+                            <td>sets the color of the text</td>
+                            <td>color name, hex code, rgb code</td>
+                            <td>
+                                <code>
+                                    color: red;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>direction</td>
+                            <td>sets the direction of the text</td>
+                            <td>ltr, rtl</td>
+                            <td>
+                                <code>
+                                    direction: ltr;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>letter-spacing</td>
+                            <td>sets the spacing between the letters</td>
+                            <td>length</td>
+                            <td>
+                                <code>
+                                    letter-spacing: 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>line-height</td>
+                            <td>sets the height of the line</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    line-height: 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>text-align</td>
+                            <td>sets the alignment of the text</td>
+                            <td>left, right, center, justify</td>
+                            <td>
+                                <code>
+                                    text-align: left;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>text-decoration</td>
+                            <td>sets the decoration of the text</td>
+                            <td>none, underline, overline, line-through, blink</td>
+                            <td>
+                                <code>
+                                    text-decoration: underline;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>text-indent</td>
+                            <td>sets the indentation of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    text-indent: 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>text-transform</td>
+                            <td>sets the transformation of the text</td>
+                            <td>none, capitalize, uppercase, lowercase</td>
+                            <td>
+                                <code>
+                                    text-transform: uppercase;
+                                </code>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>text-shadow</td>
+                            <td>sets the shadow of the text</td>
+                            <td>none, length, color</td>
+                            <td>
+                                <code>
+                                    text-shadow: 2px 2px 2px red;
+                                </code>
+                            </td>
+
+                        </tr>
+
+
+
+
+                    </tbody>
+
+                </table>
+
+            </li>
+
+
+
+            <li>Font properties
+
+                <!-- make a <table></table> -->
+
+                <table>
+                    <Thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>values</th>
+                            <th>example</th>
+
+                        </tr>
+                    </Thead>
+
+                    <tbody>
+                        <tr>
+                            <td>font-family</td>
+                            <td>sets the font family of the text</td>
+                            <td>font name, generic font name</td>
+                            <td>
+                                <code>
+                                    font-family: Arial, sans-serif;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>font-size</td>
+                            <td>sets the font size of the text</td>
+                            <td>length, percentage, absolute size, relative size</td>
+                            <td>
+                                <code>
+                                    font-size: 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>font-style</td>
+                            <td>sets the font style of the text</td>
+                            <td>normal, italic, oblique</td>
+                            <td>
+                                <code>
+                                    font-style: italic;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>font-variant</td>
+                            <td>sets the font variant of the text</td>
+                            <td>normal, small-caps</td>
+                            <td>
+                                <code>
+                                    font-variant: small-caps;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>font-weight</td>
+                            <td>sets the font weight of the text</td>
+                            <td>normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900</td>
+                            <td>
+                                <code>
+                                    font-weight: bold;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>font</td>
+                            <td>sets the font of the text</td>
+                            <td>font-style font-variant font-weight font-size/line-height font-family</td>
+                            <td>
+                                <code>
+                                    font: italic small-caps bold 2px/2px Arial, sans-serif;
+                                </code>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </li>
+
+            <li>Background properties
+
+                <!-- make a <table></table> -->
+
+                <table>
+                    <Thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>values</th>
+                            <th>example</th>
+
+                        </tr>
+                    </Thead>
+
+                    <tbody>
+                        <tr>
+                            <td>background-color</td>
+                            <td>sets the background color of the text</td>
+                            <td>color name, hex code, rgb code</td>
+                            <td>
+                                <code>
+                                    background-color: red;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-image</td>
+                            <td>sets the background image of the text</td>
+                            <td>url</td>
+                            <td>
+                                <code>
+                                    background-image: url("image.jpg");
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>sets the background repeat of the text</td>
+                            <td>repeat, repeat-x, repeat-y, no-repeat</td>
+                            <td>
+                                <code>
+                                    background-repeat: repeat-x;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-attachment</td>
+                            <td>sets the background attachment of the text</td>
+                            <td>scroll, fixed</td>
+                            <td>
+                                <code>
+                                    background-attachment: fixed;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-position</td>
+                            <td>sets the background position of the text</td>
+                            <td>length, percentage, left, right, center, top, bottom</td>
+                            <td>
+                                <code>
+                                    background-position: 2px 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background</td>
+                            <td>sets the background of the text</td>
+                            <td>background-color background-image background-repeat background-attachment
+                                background-position</td>
+                            <td>
+                                <code>
+                                    background: red url("image.jpg") repeat-x fixed 2px 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </li>
+
+            <li>Border properties
+
+                <!-- make a <table></table> -->
+
+                <table>
+                    <Thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>values</th>
+                            <th>example</th>
+
+                        </tr>
+                    </Thead>
+
+                    <tbody>
+                        <tr>
+                            <td>border-color</td>
+                            <td>sets the border color of the text</td>
+                            <td>color name, hex code, rgb code</td>
+                            <td>
+                                <code>
+                                    border-color: red;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border-style</td>
+                            <td>sets the border style of the text</td>
+                            <td>none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</td>
+                            <td>
+                                <code>
+                                    border-style: solid;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border-width</td>
+                            <td>sets the border width of the text</td>
+                            <td>length, thin, medium, thick</td>
+                            <td>
+                                <code>
+                                    border-width: 2px;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border</td>
+                            <td>sets the border of the text</td>
+                            <td>border-width border-style border-color</td>
+                            <td>
+                                <code>
+                                    border: 2px solid red;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border-top</td>
+                            <td>sets the top border of the text</td>
+                            <td>border-top-width border-top-style border-top-color</td>
+                            <td>
+                                <code>
+                                    border-top: 2px solid red;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border-right</td>
+                            <td>sets the right border of the text</td>
+                            <td>border-right-width border-right-style border-right-color</td>
+                            <td>
+                                <code>
+                                    border-right: 2px solid red;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border-bottom</td>
+
+                            <td>sets the bottom border of the text</td>
+
+                            <td>border-bottom-width border-bottom-style border-bottom-color</td>
+
+                            <td>
+                                <code>
+                                    border-bottom: 2px solid red;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-left</td>
+                            <td>sets the left border of the text</td>
+                            <td>border-left-width border-left-style border-left-color</td>
+                            <td>
+                                <code>
+                                    border-left: 2px solid red;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-radius</td>
+                            <td>sets the border radius of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    border-radius: 2px;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-top-left-radius</td>
+                            <td>sets the top left border radius of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    border-top-left-radius: 2px;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-top-right-radius</td>
+                            <td>sets the top right border radius of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    border-top-right-radius: 2px;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-bottom-right-radius</td>
+                            <td>sets the bottom right border radius of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    border-bottom-right-radius: 2px;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-bottom-left-radius</td>
+                            <td>sets the bottom left border radius of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    border-bottom-left-radius: 2px;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-spacing</td>
+                            <td>sets the border spacing of the text</td>
+                            <td>length, percentage</td>
+                            <td>
+                                <code>
+                                    border-spacing: 2px;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td>border-collapse</td>
+                            <td>sets the border collapse of the text</td>
+                            <td>collapse, separate</td>
+                            <td>
+                                <code>
+                                    border-collapse: collapse;
+                                </code>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </li>
+
+            <li>list properties
+
+                <!-- make a <table></table> -->
+
+                <table>
+                    <Thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>values</th>
+                            <th>example</th>
+
+                        </tr>
+                    </Thead>
+
+                    <tbody>
+                        <tr>
+                            <td>list-style-type</td>
+                            <td>sets the list style type of the text</td>
+                            <td>disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman,
+                                lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, upper-alpha</td>
+                            <td>
+                                <code>
+                                    list-style-type: disc;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>list-style-image</td>
+                            <td>sets the list style image of the text</td>
+                            <td>url()</td>
+                            <td>
+                                <code>
+                                    list-style-image: url();
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>list-style-position</td>
+                            <td>sets the list style position of the text</td>
+                            <td>inside, outside</td>
+                            <td>
+                                <code>
+                                    list-style-position: inside;
+                                </code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>list-style</td>
+                            <td>sets the list style of the text</td>
+                            <td>list-style-type list-style-image list-style-position</td>
+                            <td>
+                                <code>
+                                    list-style: disc url() inside;
+                                </code>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </li>
+
+        </ol>
+
+        <h3>font</h3>
+
+        <p>
+            The font property is a shorthand property for setting font-style, font-variant, font-weight,
+            font-size/line-height, and font-family.
+
+            <br>
+
+            <br>
+
+            <code>
+                font: italic small-caps bold 12px/30px Georgia, serif;
+            </code>
+
+        </p>
+
+        <h4>font family</h4>
+
+        <p>
+
+            The font-family property specifies the font for an element.
+
+            <br>
+
+            <br>
+
+            <code>
+                font-family: Georgia, serif;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                font-family: "Times New Roman", Times, serif;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                font-family: Arial, Helvetica, sans-serif;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                font-family: "Courier New", Courier, monospace;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                font-family: "Lucida Console", Monaco, monospace;
+            </code>
+
+        </p>
+
+
+        <h2>Working with block elements</h2>
+
+        <h3>display</h3>
+
+        <p>
+            The display property specifies the display behavior (the type of rendering box) of an element.
+
+            <br>
+
+            <br>
+
+            <code>
+                display: block;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: inline;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: inline-block;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: none;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: list-item;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: run-in;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: compact;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: marker;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: inline-table;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-row-group;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-header-group;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-footer-group;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-row;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-column-group;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-column;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-cell;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: table-caption;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: box;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: inline-box;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: flex;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                display: inline-flex;
+                            </code>
+
+
+        </p>
+
+        <h3>position</h3>
+
+        <p>
+            The position property specifies the type of positioning method used for an element (static,
+            relative, fixed, absolute or sticky).
+
+            <br>
+
+            <br>
+
+            <code>
+                position: static;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                position: relative;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                position: fixed;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                position: absolute;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                position: sticky;
+            </code>
+
+        </p>
+
+        <h3>overflow</h3>
+
+        <p>
+            The overflow property specifies what happens if content overflows an element's box.
+
+            <br>
+
+            <br>
+
+            <code>
+                overflow: visible;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                overflow: hidden;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                overflow: scroll;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                overflow: auto;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                overflow: inherit;
+            </code>
+
+        </p>
+
+        <h3>float</h3>
+
+        <p>
+            The float property specifies whether or not a box should float.
+
+            <br>
+
+            <br>
+
+            <code>
+                float: left;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                float: right;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                float: none;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                float: inherit;
+            </code>
+
+        </p>
+
+        <h3>clear</h3>
+
+        <p>
+            The clear property specifies on which sides of an element floating elements are not allowed to
+            float.
+
+            <br>
+
+            <br>
+
+            <code>
+                clear: left;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                clear: right;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                clear: both;
+            </code>
+
+            <br>
+
+            <br>
+
+            <code>
+                clear: none;
+            </code>
+
+        </p>
+        <!-- Working with Lists and Tables ,
+CSS Id and Class, Box Model(Introduction, Border properties, Padding Properties, Margin
+properties) CSS Advanced(Grouping, Dimension, Display, Positioning, Floating, Align, Pseudo
+class, Navigation Bar, Image Sprites, Attribute sector) , CSS Color , Creating page Layout and Site
+Designs -->
+
+        <h2>Working with Lists and Tables</h2>
+
+        <h3>list-style-type</h3>
+
+        <p>
+            The list-style-type property specifies the type of list-item marker in a list.
+
+        <table>
+            <tr>
+                <td>
+                    <code>
+                        list-style-type: disc;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: circle;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: square;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: decimal;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: decimal-leading-zero;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: lower-roman;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: upper-roman;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>
+                        list-style-type: lower-greek;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: lower-alpha;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: lower-latin;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: upper-alpha;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: upper-latin;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: armenian;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: georgian;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>
+                        list-style-type: lower-armenian;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: upper-armenian;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: lower-georgian;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: upper-georgian;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: hebrew;
+                    </code>
+                </td>
+                <td>
+                    <code>
+                        list-style-type: cjk-ideographic;
+
+                    </code>
+
+                </td>
+                <td>
+                    <code>
+                        list-style-type: hiragana;
+                    </code>
+                </td>
+
+            </tr>
+
+        </table>
+
+
+        </p>
+
+        <!-- <Box Model -->
+
+        <h2>Box Model</h2>
+
+        <p>The box model is essentially a box that wraps around every HTML element. It consists of: margins,
+            borders, padding, and the actual content.</p>
+
+        <h3>margin</h3>
+
+        <p>
+            The margin property is used to create space around elements, outside of any defined borders.
+
+            <br>
+
+            <br>
+
+            <code>
+            margin: 0px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            margin: 10px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            margin: 10px 20px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            margin: 10px 20px 30px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            margin: 10px 20px 30px 40px;
+        </code>
+
+        </p>
+
+        <h3>border</h3>
+
+        <p>
+            The border property is used to specify the width, style, and color of an element's border.
+
+            <br>
+
+            <br>
+
+            <code>
+            border: 0px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            border: 10px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            border: 10px 20px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            border: 10px 20px 30px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            border: 10px 20px 30px 40px;
+        </code>
+
+        </p>
+
+        <h3>padding</h3>
+
+        <p>
+            The padding property is used to generate space around an element's content, inside of any
+            defined borders.
+
+            <br>
+
+            <br>
+
+            <code>
+            padding: 0px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            padding: 10px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            padding: 10px 20px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            padding: 10px 20px 30px;
+        </code>
+
+            <br>
+
+            <br>
+
+            <code>
+            padding: 10px 20px 30px 40px;
+        </code>
+
+
+        </p>
+    </body>
+
+    </html>

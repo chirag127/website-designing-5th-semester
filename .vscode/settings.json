@@ -1,6 +1,7 @@
 {
-    "editor.tabCompletion": "on",
-    "diffEditor.codeLens": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "aiXcoder.showTrayIcon": true,
+  "editor.tabCompletion": "on",
+  "diffEditor.codeLens": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "aiXcoder.showTrayIcon": true,
+  "Codegeex.EnableExtension": false
 }
